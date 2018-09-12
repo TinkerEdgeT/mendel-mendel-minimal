@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for script in /etc/runonce.d/*; do
+    fname=$(basename $script)
+    [[ -f /var/cache/runonce/$fname ]] && continue
+    $script && touch /var/cache/runonce/$fname
+done

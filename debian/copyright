@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: aiy-board-resize2fs
+Source: https://aiyprojects.googlesource.com/aiy-board-resize2fs
+
+Files: *
+Copyright: Copyright 2018 Google, LLC <support-aiyprojects@google.com>
+License: Apache-2.0

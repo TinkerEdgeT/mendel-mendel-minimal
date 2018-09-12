@@ -1,0 +1,31 @@
+#!/bin/sh -e
+
+# Remove pre-generated ssh host keys and any leftover bootstrap log files. 
+rm -f /etc/ssh/ssh_host_*
+rm -f /var/log/bootstrap.log
+
+# Fix up our hostname and make sure it can be resolved to something sane
+echo aiy >/etc/hostname
+echo 127.0.0.1 aiy >>/etc/hosts
+
+# We need spidev stuff loaded so that we get SPI access
+# XXX: Should this live here? Seems specific to a particular board.
+echo spidev >> /etc/modules
+
+# Choose a locale and regenerate it to eliminate LC warnings.
+echo en_US.UTF-8 UTF-8 >/etc/locale.gen
+locale-gen
+
+# Add the aiy user and give them all the access they need.
+adduser aiy --home /home/aiy --shell /bin/bash --disabled-password --gecos ""
+mkdir -p /home/aiy
+chown aiy:aiy /home/aiy
+echo 'aiy:aiy' |chpasswd
+
+GROUPS="adm audio bluetooth games input plugdev staff sudo users video netdev systemd-journal"
+
+for group in $GROUPS; do \
+	adduser aiy $group; \
+done
+
+echo 'aiy ALL=(ALL) ALL' >>/etc/sudoers
