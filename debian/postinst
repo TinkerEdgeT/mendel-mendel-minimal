@@ -17,7 +17,7 @@ echo en_US.UTF-8 UTF-8 >/etc/locale.gen
 locale-gen
 
 # Add the aiy user and give them all the access they need.
-adduser aiy --home /home/aiy --shell /bin/bash --disabled-password --gecos ""
+adduser aiy --home /home/aiy --shell /bin/bash --disabled-password --gecos "" || true
 mkdir -p /home/aiy
 chown aiy:aiy /home/aiy
 echo 'aiy:aiy' |chpasswd
@@ -28,4 +28,4 @@ for group in $GROUPS; do \
 	adduser aiy $group; \
 done
 
-echo 'aiy ALL=(ALL) ALL' >>/etc/sudoers
+#DEBHELPER#
