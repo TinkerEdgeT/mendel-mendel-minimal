@@ -1,7 +1,6 @@
 #!/bin/sh -e
 
-# Remove pre-generated ssh host keys and any leftover bootstrap log files. 
-rm -f /etc/ssh/ssh_host_*
+# Remove leftover bootstrap log files.
 rm -f /var/log/bootstrap.log
 
 # Fix up our hostname and make sure it can be resolved to something sane

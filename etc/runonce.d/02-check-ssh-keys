@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -f /etc/ssh/ssh_host_*
+test -f /etc/ssh/ssh_host_dsa_key || dpkg-reconfigure openssh-server
