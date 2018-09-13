@@ -27,4 +27,8 @@ for group in $GROUPS; do \
 	adduser aiy $group; \
 done
 
+if ! grep -q aiy /etc/sudoers; then
+    echo 'aiy ALL=(ALL) NOPASSWD: ALL' >>/etc/sudoers
+fi
+
 #DEBHELPER#
