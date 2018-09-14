@@ -14,6 +14,7 @@ echo spidev >> /etc/modules
 # Choose a locale and regenerate it to eliminate LC warnings.
 echo en_US.UTF-8 UTF-8 >/etc/locale.gen
 locale-gen
+echo LANG=en_US.UTF-8 >/etc/locale.conf
 
 # Add the aiy user and give them all the access they need.
 adduser aiy --home /home/aiy --shell /bin/bash --disabled-password --gecos "" || true
