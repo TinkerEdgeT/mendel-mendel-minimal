@@ -22,7 +22,7 @@ mkdir -p /home/aiy
 chown aiy:aiy /home/aiy
 echo 'aiy:aiy' |chpasswd
 
-GROUPS="adm audio bluetooth games input plugdev staff sudo users video netdev systemd-journal"
+GROUPS="adm audio bluetooth games i2c input plugdev staff sudo users video netdev systemd-journal"
 
 for group in $GROUPS; do \
 	adduser aiy $group; \
