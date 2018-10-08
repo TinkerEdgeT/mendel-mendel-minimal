@@ -23,7 +23,7 @@ chown aiy:aiy /home/aiy
 echo 'aiy:aiy' |chpasswd
 
 # Create group apex to give aiy user r/w privileges to apex devices
-groupadd apex
+groupadd apex || true
 
 GROUPS="adm audio bluetooth games i2c input plugdev staff sudo users video netdev systemd-journal apex"
 
