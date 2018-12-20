@@ -1,0 +1,22 @@
+#!/bin/bash
+
+random_word()
+{
+    local wordlist=$1; shift
+    local max=$(wc -l $wordlist |awk '{ print $1 }')
+    local line=$(($RANDOM % $max + 1))
+
+    head -n $line $wordlist |tail -n 1
+}
+
+generate_hostname()
+{
+    local adj=$(random_word /tmp/adjectives.txt)
+    local noun=$(random_word /tmp/nouns.txt)
+
+    echo "${adj}-${noun}"
+}
+
+hostname=$(generate_hostname)
+echo $hostname >/etc/hostname
+/usr/bin/hostnamectl set-hostname $hostname
