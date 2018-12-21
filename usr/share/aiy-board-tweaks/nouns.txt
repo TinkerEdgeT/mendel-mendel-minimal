@@ -17,6 +17,7 @@ pig
 quill
 rabbit
 snail
+shrimp
 tang
 umpire
 valet

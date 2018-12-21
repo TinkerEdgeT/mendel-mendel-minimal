@@ -8,6 +8,7 @@ green
 hopeful
 indigo
 jumping
+jumbo
 king
 lime
 mocha
