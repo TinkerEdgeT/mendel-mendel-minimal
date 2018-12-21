@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ADJECTIVES_FILE=/usr/share/aiy-board-tweaks/adjectives.txt
+NOUNS_FILE=/usr/share/aiy-board-tweaks/nouns.txt
+
 random_word()
 {
     local wordlist=$1; shift
@@ -11,12 +14,14 @@ random_word()
 
 generate_hostname()
 {
-    local adj=$(random_word /tmp/adjectives.txt)
-    local noun=$(random_word /tmp/nouns.txt)
+    local adj=$(random_word $ADJECTIVES_FILE)
+    local noun=$(random_word $NOUNS_FILE)
 
     echo "${adj}-${noun}"
 }
 
 hostname=$(generate_hostname)
 echo $hostname >/etc/hostname
+/bin/hostname $hostname
 /usr/bin/hostnamectl set-hostname $hostname
+echo 127.0.0.1 $hostname >>/etc/hosts
