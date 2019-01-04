@@ -9,7 +9,7 @@ Section: misc
 Priority: optional
 Architecture: all
 Depends: e2fsprogs(>=1.43), adduser, sudo, openssh-server, locales, avahi-daemon,
-  bluez, network-manager, passwd, python2.7, ${misc:Depends}
+  bluez, network-manager, passwd, python2.7, runonce, ${misc:Depends}
 Description: Performs initial system setup work
  This package contains the initial "run once" systemd service that performs
  initial startup work such as resizing the root filesystem to match the emmc
@@ -17,5 +17,6 @@ Description: Performs initial system setup work
  default, and other housekeeping behaviors (such as forcing a regeneration of
  ssh host keys).
  .
- This package is mostly empty, save for the runonce systemd service, so
- removing it should have little effect on a running system.
+ This package actually contains the runonce scripts that do the above. Like the
+ runonce package, removing this one should have little effect on a running
+ system.
