@@ -4,8 +4,8 @@
 rm -f /var/log/bootstrap.log
 
 # Fix up our hostname and make sure it can be resolved to something sane
-echo aiy >/etc/hostname
-echo 127.0.0.1 aiy >>/etc/hosts
+echo mendel >/etc/hostname
+echo 127.0.0.1 mendel >>/etc/hosts
 
 # We need spidev stuff loaded so that we get SPI access
 # XXX: Should this live here? Seems specific to a particular board.
@@ -16,15 +16,16 @@ echo en_US.UTF-8 UTF-8 >/etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 >/etc/locale.conf
 
-# Add the aiy user and give them all the access they need.
-if ! grep -qE '^aiy:' /etc/passwd; then
-    adduser aiy --home /home/aiy --shell /bin/bash --disabled-password --gecos ""
-    mkdir -p /home/aiy
-    chown aiy:aiy /home/aiy
-    echo 'aiy:aiy' |chpasswd
+# Add the mendel user and give them all the access they need.
+if ! grep -qE '^mendel:' /etc/passwd; then
+    adduser mendel --home /home/mendel --shell /bin/bash --disabled-password --gecos ""
+
+    mkdir -p /home/mendel
+    chown mendel:mendel /home/mendel
+    echo 'mendel:mendel' |chpasswd
 fi
 
-# Create group apex to give aiy user r/w privileges to apex devices
+# Create group apex to give mendel user r/w privileges to apex devices
 if ! grep -qE '^apex:' /etc/group; then
     groupadd apex
 fi
@@ -32,11 +33,11 @@ fi
 GROUPS="adm audio bluetooth games i2c input plugdev staff sudo users video netdev systemd-journal apex"
 
 for group in $GROUPS; do
-	adduser aiy $group
+	adduser mendel $group
 done
 
-if ! grep -q aiy /etc/sudoers; then
-    echo 'aiy ALL=(ALL) NOPASSWD: ALL' >>/etc/sudoers
+if ! grep -q mendel /etc/sudoers; then
+    echo 'mendel ALL=(ALL) NOPASSWD: ALL' >>/etc/sudoers
 fi
 
 #DEBHELPER#
