@@ -1,4 +1,10 @@
-aiy-board-tweaks (0.1) UNRELEASED; urgency=medium
+aiy-board-tweaks (0.2) UNRELEASED; urgency=medium
+
+  * Add in a MAC address generation and storage script.
+
+ -- AIY Projects <support-aiyprojects@google.com>  Fri, 04 Jan 2019 13:38:00 -0800
+
+aiy-board-tweaks (0.1) animal; urgency=medium
 
   * Initial release.
 
