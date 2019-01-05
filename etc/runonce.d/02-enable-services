@@ -2,5 +2,4 @@
 
 systemctl enable ssh
 systemctl enable bluetooth
-systemctl enable avahi-daemon
 systemctl enable NetworkManager
