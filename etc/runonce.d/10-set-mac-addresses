@@ -29,9 +29,6 @@ BD_ADDR_MAC_STRUCT = r'BBBBBB'
 
 WIFI_CONFIG_TEMPLATE = '''\
 Intf0MacAddress={0}
-Intf1MacAddress={0}
-Intf2MacAddress={0}
-Intf3MacAddress={0}
 END
 '''
 
@@ -116,7 +113,7 @@ def WriteWifiMacAddress(next_mac):
     '''Writes the given MAC address string to the wifi configuration files.'''
     try:
         with open(WIFI_ADDR_PATH, 'w') as fp:
-            fp.write(WIFI_CONFIG_TEMPLATE.format(next_mac))
+            fp.write(WIFI_CONFIG_TEMPLATE.format(next_mac.translate(None, ':')))
         return True
     except Exception as e:
         print('Error writing wifi configuration to %s: %s' % (WIFI_ADDR_PATH, e))
