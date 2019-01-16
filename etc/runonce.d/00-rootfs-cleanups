@@ -22,6 +22,10 @@ if ! grep -qE '^apex:' /etc/group; then
     groupadd apex 2>&1 >>/var/log/rootfs-cleanups.log
 fi
 
+# Reload and trigger udev rules so that apex devices get proper attributes
+udevadm control --reload-rules
+udevadm trigger
+
 MENDEL_GROUPS="adm audio bluetooth games i2c input plugdev staff sudo users video netdev systemd-journal apex"
 
 for i in $MENDEL_GROUPS; do
