@@ -1,4 +1,3 @@
-SUBSYSTEM=="apex_power", MODE="0660", GROUP="apex"
 SUBSYSTEM=="apex", MODE="0660", GROUP="apex"
 DEVPATH=="/module/ov5645_camera_mipi_v2", ACTION=="add", RUN+="/bin/chgrp video /sys%p/parameters/ov5645_af", RUN+="/bin/chmod ug+rw /sys%p/parameters/ov5645_af"
 DEVPATH=="/module/ov5645_camera_mipi_v2", ACTION=="change", ENV{TRIGGER}!="none", RUN+="/bin/chgrp video /sys%p/parameters/ov5645_af", RUN+="/bin/chmod ug+rw /sys%p/parameters/ov5645_af"
