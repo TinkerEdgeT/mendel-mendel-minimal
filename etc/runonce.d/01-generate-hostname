@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ADJECTIVES_FILE=/usr/share/aiy-board-tweaks/adjectives.txt
-NOUNS_FILE=/usr/share/aiy-board-tweaks/nouns.txt
+ADJECTIVES_FILE=/usr/share/mendel-minimal/adjectives.txt
+NOUNS_FILE=/usr/share/mendel-minimal/nouns.txt
 
 random_word()
 {

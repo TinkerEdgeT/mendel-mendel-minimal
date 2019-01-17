@@ -1,4 +1,4 @@
-aiy-board-tweaks (1-1) mendel-beaker; urgency=medium
+mendel-minimal (1-1) mendel-beaker; urgency=medium
 
   * Cut for beaker release and normalization of version.
   * Add in a MAC address generation and storage script.
@@ -6,7 +6,7 @@ aiy-board-tweaks (1-1) mendel-beaker; urgency=medium
 
  -- AIY Projects <support-aiyprojects@google.com>  Wed, 16 Jan 2019 12:00:00 -0800
 
-aiy-board-tweaks (0.1) animal; urgency=medium
+mendel-minimal (0.1) animal; urgency=medium
 
   * Initial release.
 
