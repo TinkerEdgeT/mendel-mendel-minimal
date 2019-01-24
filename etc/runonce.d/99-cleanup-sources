@@ -1,5 +1,0 @@
-#!/bin/bash
-
-cat /etc/apt/sources.list.d/multistrap-*.list >>/etc/apt/sources.list
-rm -f /etc/apt/sources.list.d/multistrap-*.list
-
