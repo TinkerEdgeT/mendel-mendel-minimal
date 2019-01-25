@@ -1,3 +1,9 @@
+mendel-minimal (3-1) mendel-beaker; urgency=medium
+
+  * Reverts the multistrap source lists change below.
+
+ -- AIY Projects <support-aiyprojects@google.com>  Thu, 24 Jan 2019 17:13:00 -0800
+
 mendel-minimal (2-1) mendel-beaker; urgency=medium
 
   * Collapes multistrap source lists into single file
