@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PROGNAME=$(basename $(readlink -f $0))
+date --set="$(stat /etc/runonce.d/ |grep Change |sed -e 's/^Change: //g' -e 's/+0000//g')"
