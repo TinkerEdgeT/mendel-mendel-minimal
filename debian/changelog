@@ -1,3 +1,10 @@
+mendel-minimal (4-1) mendel-beaker; urgency=medium
+
+  * Fixes the set-datetime runonce script to make use of timedatectl for
+    force write its timestamp to disk.
+
+ -- AIY Projects <support-aiyprojects@google.com>  Mon, 28 Jan 2019 13:31:00 -0800
+
 mendel-minimal (3-1) mendel-beaker; urgency=medium
 
   * Reverts the multistrap source lists change below.

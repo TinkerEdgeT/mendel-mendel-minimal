@@ -1,4 +1,7 @@
 #!/bin/bash
 
 PROGNAME=$(basename $(readlink -f $0))
-date --set="$(stat /etc/runonce.d/ |grep Change |sed -e 's/^Change: //g' -e 's/+0000//g')"
+date --set="$(stat /lost+found |grep Change |sed -e 's/^Change: //g' -e 's/+0000//g')"
+timedatectl set-ntp false
+timedatectl set-time "$(date '+%Y-%m-%d %H:%M:%S')"
+timedatectl set-ntp true
