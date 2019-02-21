@@ -1,3 +1,10 @@
+mendel-minimal (6-1) mendel-beaker; urgency=medium
+
+  * Updates set-datetime to sync to the hardware clock using hwclock and sets
+    systemd-timesyncd's timestamp file to ensure persistence across reboots.
+
+ -- AIY Projects <support-aiyprojects@google.com>  Thu, 21 Feb 2019 11:31:00 -0800
+
 mendel-minimal (5-1) mendel-beaker; urgency=medium
 
   * Fixes set-datetime to stop timesyncd and restart it when
