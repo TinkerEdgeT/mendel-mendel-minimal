@@ -1,6 +1,7 @@
 mendel-minimal (6-1) mendel-beaker; urgency=medium
 
   * set-datetime: Make timesyncd behave in the face of broken time
+  * ssh: Disable password authentication
 
  -- AIY Projects <support-aiyprojects@google.com>  Tue, 26 Feb 2019 11:32:18 -0800
 

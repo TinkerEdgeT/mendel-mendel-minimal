@@ -1,4 +1,5 @@
 #!/bin/bash
 
 rm -f /etc/ssh/ssh_host_*
+sed -e's/^#?PasswordAuthentication.*/PasswordAuthentication no/g' -i /etc/ssh/sshd_config
 test -f /etc/ssh/ssh_host_dsa_key || dpkg-reconfigure openssh-server
