@@ -2,6 +2,7 @@ mendel-minimal (6-1) mendel-beaker; urgency=medium
 
   * set-datetime: Make timesyncd behave in the face of broken time
   * ssh: Disable password authentication
+  * profile: Set the LANG var based upon /etc/locale.conf if LANG is unset.
 
  -- Coral <coral-support@google.com>  Tue, 26 Feb 2019 11:32:18 -0800
 
