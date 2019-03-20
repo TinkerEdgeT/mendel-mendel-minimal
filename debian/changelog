@@ -1,3 +1,11 @@
+mendel-minimal (7-1) mendel-chef; urgency=medium
+
+  * ssh: Disable password authentication by default
+  * check-ssh-keys: Disable challenge-response and root login
+  * profile: Set the default LANG var if it is unset
+
+ -- Coral <coral-support@google.com>  Tue, 19 Mar 2019 17:08:25 -0700
+
 mendel-minimal (6-1) mendel-beaker; urgency=medium
 
   * set-datetime: Make timesyncd behave in the face of broken time
