@@ -10,7 +10,7 @@ Section: misc
 Priority: optional
 Architecture: all
 Depends: e2fsprogs(>=1.43), adduser, sudo, openssh-server, locales, avahi-daemon,
-  bluez, network-manager, passwd, python2.7, runonce, ${misc:Depends}
+  bluez, network-manager, passwd, python2.7, runonce, haveged, ${misc:Depends}
 Description: Defines the files and packages for a minimal Mendel install
  This package contains the initial "run once" scripts that perform
  initial startup work such as resizing the root filesystem to match the emmc
