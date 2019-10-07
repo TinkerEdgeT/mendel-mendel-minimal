@@ -1,3 +1,9 @@
+mendel-minimal (8-1) mendel-day; urgency=medium
+
+  * Cut for day release
+
+ -- Coral <coral-support@google.com>  Mon, 07 Oct 2019 13:24:14 -0500
+
 mendel-minimal (7-1) mendel-chef; urgency=medium
 
   * ssh: Disable password authentication by default
