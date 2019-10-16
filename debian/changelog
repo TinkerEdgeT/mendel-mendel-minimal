@@ -1,3 +1,9 @@
+mendel-minimal (8-2) mendel-day; urgency=medium
+
+  * Add in the iptables runonce script to reduce problems with docker.
+
+ -- Coral <coral-support@google.com>  Tue, 15 Oct 2019 19:38:22 -0500
+
 mendel-minimal (8-1) mendel-day; urgency=medium
 
   * Cut for day release
