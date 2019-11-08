@@ -1,3 +1,9 @@
+mendel-minimal (8-3) mendel-day; urgency=medium
+
+  * Allow non-root access to GPIO and PWM sysfs nodes
+
+ -- Coral <coral-support@google.com>  Fri, 08 Nov 2019 15:00:08 -0600
+
 mendel-minimal (8-2) mendel-day; urgency=medium
 
   * Add in the iptables runonce script to reduce problems with docker.
