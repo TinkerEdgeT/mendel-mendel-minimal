@@ -26,7 +26,7 @@ fi
 udevadm control --reload-rules
 udevadm trigger
 
-MENDEL_GROUPS="adm audio bluetooth games i2c input plugdev staff sudo users video netdev systemd-journal apex"
+MENDEL_GROUPS="adm audio bluetooth games i2c input plugdev staff sudo users video netdev systemd-journal apex render"
 
 for i in $MENDEL_GROUPS; do
     echo "runonce: adding mendel to $i" 2>&1 >>/var/log/rootfs-cleanups.log
