@@ -11,3 +11,8 @@ SUBSYSTEM=="pwm*", PROGRAM="/bin/sh -c '\
 	chown -R root:input /sys/class/pwm && chmod -R 770 /sys/class/pwm;\
 	chown -R root:input /sys$devpath && chmod -R 770 /sys$devpath\
 '"
+SUBSYSTEM=="spidev", GROUP="input", MODE="0660"
+SUBSYSTEM=="spidev*", PROGRAM="/bin/sh -c '\
+	chown -R root:input /sys/class/spidev && chmod -R 770 /sys/class/spidev;\
+	chown -R root:input /sys$devpath && chmod -R 770 /sys$devpath\
+'"

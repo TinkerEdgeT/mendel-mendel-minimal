@@ -1,3 +1,9 @@
+mendel-minimal (8-4) mendel-eagle; urgency=medium
+
+  * Allow non-root access to spidev nodes
+
+ -- Coral <coral-support@google.com>  Thu, 03 Dec 2020 16:24:11 -0800
+
 mendel-minimal (8-3) mendel-day; urgency=medium
 
   * Allow non-root access to GPIO and PWM sysfs nodes
